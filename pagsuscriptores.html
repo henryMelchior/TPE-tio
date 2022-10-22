@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pagsuscriptores</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://kit.fontawesome.com/f8680ec25a.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <a class="stylelogowhite" href="index.html" target="_blank"><img src="image\weblogowhite.png" /></a>
+      <div class="btn_menu">
+        <a href="#"><i class="fa-solid fa-bars"></i></a>
+      </div>
+    </div>
+    <div class="menu">
+      <nav>
+        <ul class="navigation">
+          <li><a href="pagsuscriptores.html" target="_blank">SUSCRIBITE</a></li>
+          <li><a href="navegador.html" target="_blank">VOLVE A NAVEGAR</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="bodyform">
+    <div>
+      <form action="" class="formsuscripcion">
+        <h1> SUSCRIPCION </h1>
+        <input class="controls" type="text" id="usuario" name="usuario" value="" placeholder="ingresa tu usuario" required />
+        <input class="controls" type="email" id="email" name="email" value="" placeholder="ingresa tu correo" required />
+        <table class="captchasuscripcion">
+          <label for="captcha">Ingrese el resultado de 2x2: </label><input id="form-captcha" type="number" min="0"
+            max="15">
+          <button type="button" id="btn-captcha">Enviar</button>
+          <div id="respuesta"></div>
+      </form>
+    </div>
+  </div>
+  <script type="text/javascript" src="js/captcha.js"></script>
+  <script src="js/menudesplegable.js"></script>
+</body>
+
+</html>
