@@ -38,6 +38,7 @@ function mostrar_tabla(json) {
         let donde = tabla.donde;
         id = tabla.id;
 <<<<<<< HEAD
+<<<<<<< HEAD
         tablarest.innerHTML +=
             `<tr>
         <td>${cuando}</td>
@@ -47,6 +48,8 @@ function mostrar_tabla(json) {
         <td><button id=${tabla.id} class="btn_editar">Editar</button>
         </tr>`
 =======
+=======
+>>>>>>> 8783fe283d94c1e8cf25e3ba8ee6483d1358252c
 
 
 
@@ -90,7 +93,20 @@ function mostrar_tabla(json) {
 
         
         tablarest.appendChild(fila)
+<<<<<<< HEAD
 >>>>>>> 4daf9a5e738477d372f6c8f906cd367a430dd089
+=======
+=======
+        tablarest.innerHTML +=
+            `<tr>
+        <td>${cuando}</td>
+        <td>${quien}</td>
+        <td>${donde}</td>
+        <td><button id=${tabla.id} class="btn_eliminar">Eliminar</button>
+        <td><button id=${tabla.id} class="btn_editar">Editar</button>
+        </tr>`
+>>>>>>> cb200e581c574d4ce2939209de7f39044ab218c2
+>>>>>>> 8783fe283d94c1e8cf25e3ba8ee6483d1358252c
     }
     let botones_eliminar = document.querySelectorAll(".btn_eliminar");
     let botones_editar = document.querySelectorAll(".btn_editar");
