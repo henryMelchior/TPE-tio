@@ -37,49 +37,14 @@ function mostrar_tabla(json) {
         let quien = tabla.quien;
         let donde = tabla.donde;
         id = tabla.id;
-
-
-
-
-
-        let fila = document.createElement('tr');
-            
-        let td = document.createElement('td');
-        td.innerHTML = cuando;
-        fila.appendChild(td);
-        td = document.createElement('td');
-        td.innerHTML = quien;
-        fila.appendChild(td);
-        td = document.createElement('td');
-        td.innerHTML = donde;
-        fila.appendChild(td);
-        td = document.createElement('td')
-        let btn = document.createElement('button')
-        btn.innerHTML= "borrar"
-        btn.name = id;
-        btn.dataButtonname = id;
-        td.appendChild(btn);
-        fila.appendChild(td);
-        btn.addEventListener("click", ()=>{
-            eliminar(id);
-        });
-        td = document.createElement('td')
-        let btnModificar = document.createElement('button')
-        btnModificar.innerHTML= "modificar";
-        btnModificar.name = id;
-        btnModificar.dataButtonname = id;
-        td.appendChild(btnModificar);
-        fila.appendChild(td);
-        btnModificar.addEventListener("click", ()=>{
-            enviar_modificacion(id);
-        });
-
-        
-
-
-
-        
-        tablarest.appendChild(fila)
+        tablarest.innerHTML +=
+            `<tr>
+        <td>${cuando}</td>
+        <td>${quien}</td>
+        <td>${donde}</td>
+        <td><button id=${tabla.id} class="btn_eliminar">Eliminar</button>
+        <td><button id=${tabla.id} class="btn_editar">Editar</button>
+        </tr>`
     }
     let botones_eliminar = document.querySelectorAll(".btn_eliminar");
     let botones_editar = document.querySelectorAll(".btn_editar");
