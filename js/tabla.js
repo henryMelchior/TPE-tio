@@ -8,14 +8,14 @@ let cuando = document.querySelector("#input_cuando");
 let quien = document.querySelector("#input_quien");
 let donde = document.querySelector("#input_donde");
 let id = 0;
-let btn_confirmar_edicion = document.querySelector("#btn_confirmar_edicion");
-let btn_agregar = document.querySelector("#btn_agregar");
-let btn_buscar = document.querySelector("#btn_buscar").addEventListener("click", function () {
-    input_busqueda.classList.remove("esconder");
+let btnConfirmarEdicion = document.querySelector("#btn_confirmar_edicion");
+let btnAgregar = document.querySelector("#btn_agregar");
+let btnBuscar = document.querySelector("#btn_buscar").addEventListener("click", function () {
+    inputBusqueda.classList.remove("esconder");
 });
-let input_busqueda = document.querySelector("#input_buscar");
-input_busqueda.addEventListener("keyup", filtrado);
-let arreglo_datos = [];
+let inputBusqueda = document.querySelector("#input_buscar");
+inputBusqueda.addEventListener("keyup", filtrado);
+let arregloDatos = [];
 
 
 async function obtenerDatos() {
@@ -23,14 +23,14 @@ async function obtenerDatos() {
         let res = await fetch(url);
         let json = await res.json();
         console.log(json);
-        arreglo_datos = json;
-        mostrar_tabla(json);
+        arregloDatos = json;
+        mostrarTabla(json);
     } catch (error) {
         console.log(error)
     }
 }
 
-function mostrar_tabla(json) {
+function mostrarTabla(json) {
     tablarest.innerHTML = "";
     for (const tabla of json) {
         let cuando = tabla.cuando;
@@ -71,7 +71,7 @@ function mostrar_tabla(json) {
         td.appendChild(btnModificar);
         fila.appendChild(td);
         btnModificar.addEventListener("click", ()=>{
-            enviar_modificacion(id);
+            enviarModificacion(id);
         });
 
         
@@ -81,15 +81,15 @@ function mostrar_tabla(json) {
         
         tablarest.appendChild(fila)
     }
-    let botones_eliminar = document.querySelectorAll(".btn_eliminar");
-    let botones_editar = document.querySelectorAll(".btn_editar");
+    let btnEliminar = document.querySelectorAll(".btn_eliminar");
+    let btnEditar = document.querySelectorAll(".btnEditar");
 
-    for (const boton of botones_eliminar) {
+    for (const boton of btnEliminar) {
         boton.addEventListener("click", () => eliminar(boton.id));
     }
 
-    for (const btn_editar of botones_editar) {
-        btn_editar.addEventListener("click", () => mostrar_btn_editar(btn_editar.id));
+    for (const btnEditar of btnEditar) {
+        btnEditar.addEventListener("click", () => mostrarBtnEditar(btnEditar.id));
     }
 }
 obtenerDatos();
@@ -117,7 +117,7 @@ async function enviarDatos() {
         console.log(error);
 
     }
-    reset_inputs();
+    resetInputs();
     obtenerDatos();
 }
 
@@ -140,17 +140,17 @@ async function eliminar(id) {
 }
 
 
-function mostrar_btn_editar(id) {
+function mostrarBtnEditar(id) {
 
-    btn_confirmar_edicion.classList.remove("esconder");
-    btn_agregar.classList.add("esconder");
-    btn_confirmar_edicion.addEventListener("click", () => enviar_modificacion(id));
+    btnConfirmarEdicion.classList.remove("esconder");
+    btnAgregar.classList.add("esconder");
+    btnConfirmarEdicion.addEventListener("click", () => enviarModificacion(id));
 }
 
 
-async function enviar_modificacion(id) {
-    btn_confirmar_edicion.classList.add("esconder");
-    btn_agregar.classList.remove("esconder");
+async function enviarModificacion(id) {
+    btnConfirmarEdicion.classList.add("esconder");
+    btnAgregar.classList.remove("esconder");
 
     let valores = {
         "cuando": cuando.value,
@@ -174,25 +174,25 @@ async function enviar_modificacion(id) {
     } catch (error) {
         console.log(error);
     }
-    reset_inputs();
+    resetInputs();
     obtenerDatos();
 
 }
 
 
 function filtrado() {
-    let arreglo_aux = [];
+    let arregloAux = [];
 
-    for (let e = 0; e < arreglo_datos.length; e++) {
-        if (arreglo_datos[e].quien.includes(input_busqueda.value)) {
-            arreglo_aux.push(arreglo_datos[e]);
+    for (let e = 0; e < arregloDatos.length; e++) {
+        if (arregloDatos[e].quien.includes(inputBusqueda.value)) {
+            arreglo_aux.push(arregloDatos[e]);
         }
     }
-    mostrar_tabla(arreglo_aux)
+    mostrarTabla(arreglo_aux)
 
 }
 
-function reset_inputs() {
+function resetInputs() {
     cuando.value = "";
     quien.value = "";
     donde.value = "";
