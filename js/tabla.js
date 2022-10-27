@@ -3,14 +3,14 @@
 const url = "https://62c458ff7d83a75e39f78aa6.mockapi.io/api/recitales";
 
 let tablarest = document.querySelector("#tabla");
-document.querySelector("#btnAgregar").addEventListener("click", enviarDatos);
+document.querySelector("#btn_agregar").addEventListener("click", enviarDatos);
 let cuando = document.querySelector("#input_cuando");
 let quien = document.querySelector("#input_quien");
 let donde = document.querySelector("#input_donde");
 let id = 0;
-let btnConfirmarEdicion = document.querySelector("#btnConfirmarEdicion");
-let btnAgregar = document.querySelector("#btnAgregar");
-let btnBuscar = document.querySelector("#btnBuscar").addEventListener("click", function () {
+let btnConfirmarEdicion = document.querySelector("#btn_confirmar_edicion");
+let btnAgregar = document.querySelector("#btn_agregar");
+let btnBuscar = document.querySelector("#btn_buscar").addEventListener("click", function () {
     inputBusqueda.classList.remove("esconder");
 });
 let inputBusqueda = document.querySelector("#input_buscar");
