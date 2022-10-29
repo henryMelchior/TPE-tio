@@ -176,7 +176,10 @@ a {
     .btn_menu {
         display: none;
     }
-
+    .logo {
+        display: none;
+    }
+    
     ul.navigation {
         display: flex;
         flex-direction: row;
