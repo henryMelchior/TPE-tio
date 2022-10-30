@@ -112,11 +112,19 @@ h1 {
     margin: 15px;
     text-align: left;
 }
-
-
-.tablerecitales {
+.tablerecitales{
+    margin-top: 150px;
     display: block;
+}
+thead {
+    color: rgb(224, 92, 43);
+    text-decoration: overline;
+}
+table, td, tr {
     padding: 5px 10px 5px;
+    font-size: 20px;
+    text-decoration: none;
+    position: relative;
 }
 .ranking {
     margin: 50px;
@@ -205,18 +213,7 @@ footer {
     .rankingrecital {
         display: flex;
     }
-    thead {
-        right: 75px;
-        color: rgb(224, 92, 43);
-        text-decoration: overline;
-    }
-    table, td, tr {
-        padding: 5px 10px 5px;
-        margin: 75px;
-        font-size: 20px;
-        text-decoration: none;
-        position: relative;
-    }
+    
     .formsuscripcion {
         width: 300px;
         background-color: rgb(224, 92, 43);
@@ -252,6 +249,11 @@ footer {
     }
     .esconder{
         display: none;
+    }
+    .tablerecitales{
+        margin-top: 150px;
+        margin-left: 450px;
+        display: block;
     }
    
 
