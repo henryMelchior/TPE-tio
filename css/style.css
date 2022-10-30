@@ -1,5 +1,7 @@
 * {
     font-family: "Oswald";
+    margin: 0;
+    padding: 0;
 }
 
 .menu {
@@ -127,16 +129,7 @@ h1 {
     padding: 5px 10px 5px;
 }
 
-.redes {
-    background-color: black;
-    width: 100%;
-    height: max-content;
-    font-size: 30px;
-    padding: 5px;
-    color: white;
-    display: flex;
-    align-items: center;
-}
+
 
 h2 {
     margin: 4px;
@@ -181,7 +174,6 @@ a {
         display: flex;
         flex-direction: row;
     }
-
     .containernews {
         display: flex;
         background-color: transparent;
@@ -235,7 +227,7 @@ a {
         color: rgb(31, 30, 30);
         left: 20px;
         justify-content: center;
-        position: absolute;
+       
     }
 
     .formsuscripcion h1 {
@@ -264,6 +256,21 @@ a {
     }
     .esconder{
         display: none;
+    }
+    .redes {
+        background-color: black;
+        width: 2000px;
+        height: 70px;
+        padding: 30px;
+        font-size: 30px;
+        color: white;
+        display: flex;
+        align-items: center;
+    }
+   
+    footer {
+        margin-top: 700px;
+        position: absolute;
     }
 
 }
