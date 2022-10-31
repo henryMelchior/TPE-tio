@@ -230,7 +230,7 @@ table {
     .rankingrecital {
         display: flex;
     }
-<<<<<<< HEAD
+
 
     .ranking {
         left: 650px;
@@ -255,7 +255,7 @@ table {
         text-decoration: none;
         position: relative;
     }
-=======
+
     
     .formsuscripcion {
         width: 300px;
@@ -299,6 +299,4 @@ table {
         display: block;
     }
    
-
->>>>>>> 5e47cb9a0950520f946bbd01a1928b072589a470
 }
