@@ -50,12 +50,13 @@ ul.navigation {
     color: white;
     line-height: 100px;
     text-decoration: none;
-    
+    flex-direction: column;
+    display: none;
 }
 
 ul.navigation.show {
     display: flex;
-    flex-direction: row;
+    
 }
 
 ul.navigation li {
@@ -183,6 +184,11 @@ footer {
     }
     .logo {
         display: none;
+    }
+   
+    ul.navigation {
+        display: flex;
+        flex-direction: row;
     }
    
     .containernews {
