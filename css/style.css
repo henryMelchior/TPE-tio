@@ -1,38 +1,13 @@
 * {
     font-family: "Oswald";
+    margin: 0;
+    padding: 0;
 }
 
 .menu {
     width: 100%;
     display: flex;
     background-color: black;
-}
-
-ul.navigation {
-    width: 100%;
-    margin: 0px;
-    padding: 0px;
-    display: none;
-    flex-direction: column;
-}
-
-ul.navigation.show {
-    display: flex;
-}
-
-ul.navigation li {
-    list-style: none;
-    margin: 0px 0px;
-    padding: 15px 20px;
-}
-
-ul.navigation li a {
-    text-decoration: none;
-    color: white;
-}
-
-ul.navigation li a:hover {
-    color: black;
 }
 
 .bodyindex {
@@ -76,6 +51,7 @@ ul.navigation {
     line-height: 100px;
     text-decoration: none;
     flex-direction: column;
+    display: none;
 }
 
 ul.navigation.show {
@@ -110,40 +86,41 @@ h1 {
     margin: 15px;
     text-align: left;
 }
-
-.ranking {
-    padding: 10px;
-    margin: 15px;
-    width: 100%;
-    background-color: black;
+.tablerecitales{
+    margin-top: 150px;
+    display: block;
+}
+thead {
+    color: rgb(224, 92, 43);
+    text-decoration: overline;
+}
+table, td, tr {
+    padding: 5px 10px 5px;
     font-size: 20px;
+    text-decoration: none;
+    position: relative;
+}
+.ranking {
+    margin: 50px;
+    padding: 50px;
+    background-color: black;
+    font-size: 15px;
     color: rgb(224, 92, 43);
     text-decoration: none;
-    display: block;
+    position: relative;
 }
-
-.tablerecitales {
-    display: block;
-    padding: 5px 10px 5px;
+.artistaRecomendado{
+    margin: 50px;
+    padding: 50px;
 }
-
-.redes {
-    background-color: black;
-    width: 100%;
-    height: max-content;
-    font-size: 30px;
-    padding: 5px;
-    color: white;
-    display: flex;
-    align-items: center;
+.btn-mostrarArtista {
+    color: rgb(224, 92, 43);;
 }
-
 h2 {
     margin: 4px;
     font-size: 30px;
     color: white;
 }
-
 button {
     background-color: white;
     margin: 15px;
@@ -157,7 +134,6 @@ button {
     border-radius: 4px;
     font-size: 20px;
 }
-
 h3 {
     font-size: 30px;
 }
@@ -167,21 +143,53 @@ a {
     text-decoration: none;
     color: black;
 }
+.formsuscripcion {
+    width: 300px;
+    background-color: rgb(224, 92, 43);
+    padding: 25px 30px;
+    margin: 50px 5px 500px 500px;
+    box-shadow: 16px 24px 38px;
+    color: rgb(31, 30, 30);
+    left: 20px;
+    justify-content: center;
+    position: absolute;
+}
 
+.formsuscripcion h1 {
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+.redes {
+    background-color: black;
+    width: 2000px;
+    height: 70px;
+    padding: 30px;
+    font-size: 30px;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+footer {
+    margin-top: 700px;
+    position: absolute;
+}
 
 @media screen and (min-width:768px) {
-
-   
-
     .btn_menu {
         display: none;
     }
-
+    .logo {
+        display: none;
+    }
+   
     ul.navigation {
         display: flex;
         flex-direction: row;
     }
-
+   
     .containernews {
         display: flex;
         background-color: transparent;
@@ -200,32 +208,7 @@ a {
 
     .rankingrecital {
         display: flex;
-    }
-
-    .ranking {
-        left: 650px;
-        padding: 75px;
-        background-color: black;
-        font-size: 20px;
-        color: rgb(224, 92, 43);
-        text-decoration: none;
-        position: absolute;
-    }
-
-    thead {
-        right: 75px;
-        color: rgb(224, 92, 43);
-        text-decoration: overline;
-    }
-
-    table, td, tr {
-        padding: 5px 10px 5px;
-        margin: 75px;
-        font-size: 20px;
-        text-decoration: none;
-        position: relative;
-    }
-
+    }   
     .formsuscripcion {
         width: 300px;
         background-color: rgb(224, 92, 43);
@@ -235,16 +218,14 @@ a {
         color: rgb(31, 30, 30);
         left: 20px;
         justify-content: center;
-        position: absolute;
+       
     }
-
     .formsuscripcion h1 {
         font-size: 30px;
         color: white;
         text-align: center;
         text-decoration: none;
     }
-
     .captchasuscripcion,
     table {
         margin: 0%;
@@ -252,7 +233,6 @@ a {
         border: none;
         font-size: 20px;
     }
-
     .controls {
         width: 90%;
         background-color: rgb(224, 92, 43);
@@ -265,5 +245,10 @@ a {
     .esconder{
         display: none;
     }
-
+    .tablerecitales{
+        margin-top: 150px;
+        margin-left: 450px;
+        display: block;
+    }
+   
 }
