@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ranking</title>
     <link rel="stylesheet" href="css/style.css" />
+    <script src="https://kit.fontawesome.com/f8680ec25a.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -30,32 +32,37 @@
       <div class="rankingrecital" id="ran-reci">
         <div class="ranking">
           <ol>
-            <li>Paulo Londra: Bzrp Music Sessions, Vol. 23</li>
-            <li>Si quieren frontear</li>
-            <li>Nena maldicion</li>
-            <li>Una noche en Medellín</li>
-            <li>Adan y Eva</li>
-            <li>ARRANCARMELO</li>
-            <li>Marte</li>
-            <li>Chica paranormal</li>
-            <li>Plan A</li>
-            <li>Una noche en Medellín</li>
-            <li>cuatro veinte</li>
-            <li>ARRANCARMELO</li>
-            <li>Marte</li>
-            <li>Universo Paralelo</li>
-            <li>Nena maldicion</li>
-            <li>Una noche en Medellín</li>
-            <li>Adan y Eva</li>
-            <li>ARRANCARMELO</li>
-            <li>Marte</li>
-            <li>Chica paranormal</li>
-            <li>Desesperados</li>
-            <li>Tiago PZK: Bzrp Music Sessions, Vol. 48</li>
+            <li class="artistaRank">Paulo Londra: Bzrp Music Sessions, Vol. 23</li>
+            <li class="artistaRank">Si quieren frontear</li>
+            <li class="artistaRank">Nena maldicion</li>
+            <li class="artistaRank">Una noche en Medellín</li>
+            <li class="artistaRank">Adan y Eva</li>
+            <li class="artistaRank">ARRANCARMELO</li>
+            <li class="artistaRank">Marte</li>
+            <li class="artistaRank">Chica paranormal</li>
+            <li class="artistaRank">Plan A</li>
+            <li class="artistaRank">Una noche en Medellín</li>
+            <li class="artistaRank">cuatro veinte</li>
+            <li class="artistaRank">ARRANCARMELO</li>
+            <li class="artistaRank">Marte</li>
+            <li class="artistaRank">Universo Paralelo</li>
+            <li class="artistaRank">Nena maldicion</li>
+            <li class="artistaRank">Una noche en Medellín</li>
+            <li class="artistaRank">Adan y Eva</li>
+            <li class="artistaRank">ARRANCARMELO</li>
+            <li class="artistaRank">Marte</li>
+            <li class="artistaRank">Chica paranormal</li>
+            <li class="artistaRank">Desesperados</li>
+            <li class="artistaRank">Tiago PZK: Bzrp Music Sessions, Vol. 48</li>
           </ol>
         </div>
     
-      
+        <div class="artistaRecomendado">
+          <p>El artista recomendado de esta semana es:</p>
+          <p><span id="artista"></span></p>
+          <button class="btn-mostrarArtista" id="btn-mostrarArtista">Mostrar Artista</button>
+        </div>
+
       <footer>
         <div class="redes">
           <i class="fa-solid fa-hashtag"></i>
@@ -63,7 +70,8 @@
           <img src="image/redes.png">
         </div>
       </footer>
-
+  
+  <script src="js/artistaRandom.js"></script>
   <script src="js/menudesplegable.js"></script>
   <script src="js/tabla.js"></script>
 </body>
