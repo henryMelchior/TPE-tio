@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recitales</title>
     <link rel="stylesheet" href="css/style.css" />
+    <script src="https://kit.fontawesome.com/f8680ec25a.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -35,27 +37,28 @@
               <th>Quien</th>
               <th>Donde</th>
             </tr>
-      </div>
-      </thead>
-      <tbody id="tabla">
+      
+          </thead>
+          <tbody id="tabla">
   
-      </tbody>
-      </table>
-      <form>
-        <div class="input_tabla">
-          <input type="text" name="cuando" id="input_cuando" placeholder="Cuando">
-          <input type="text" name="quien" id="input_quien" placeholder="Quien">
-          <input type="text" name="donde" id="input_donde" placeholder="Donde">
+          </tbody>
+        </table>
+     
+        <form>
+           <div class="input_tabla">
+             <input type="text" name="cuando" id="input_cuando" placeholder="Cuando">
+             <input type="text" name="quien" id="input_quien" placeholder="Quien">
+             <input type="text" name="donde" id="input_donde" placeholder="Donde">
+           </div>
+        </form>
+        <div class="botones">
+           <button id="btn_agregar" type="button">Agregar</button>
+           <button id="btn_confirmar_edicion" class="esconder" type="button">Confirmar Edicion</button>
+           <button type="button" id="btn_buscar">Buscar</button>
+           <input type="text" placeholder="Ingrese un artista" id="input_buscar">
         </div>
-      </form>
-      <div class="botones">
-        <button id="btn_agregar" type="button">Agregar</button>
-        <button id="btn_confirmar_edicion" class="esconder" type="button">Confirmar Edicion</button>
-        <button type="button" id="btn_buscar">Buscar</button>
-        <input type="text" placeholder="Ingrese un artista" id="input_buscar">
-      </div>
-      <p id="alerta"></p>
-    </div>
+        <p id="alerta"></p>
+     </div>
     </div>
     </div>
 
